@@ -1,0 +1,23 @@
+<%- include ("./partials/header.ejs") %>
+<div class="container main ">
+	<div class="row">
+		<div class="ui huge header" style="text-align:center">
+			Sign Up
+		</div>
+		<div style="width:25%;margin:25px auto;">
+			<form  class="ui form" action="/register" method="POST">
+				<div class ="field">
+					<input type="text" placeholder="username" name="username">
+				</div>
+				<div class ="field">
+					<input type ="password" placeholder="password" name="password">
+				</div>
+				<div class="field">
+					<input class="ui violet button fluid " value="Sign Up!" type="submit">	
+				</div>
+			</form>
+		    <a class="return" href="/blogs">Go back</a>
+		</div>	
+	</div>
+</div>
+<%- include ("./partials/footer.ejs") %>

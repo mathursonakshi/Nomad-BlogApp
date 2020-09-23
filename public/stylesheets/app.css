@@ -1,0 +1,26 @@
+i.icon{
+	font-size:2em;
+}
+.container.main{
+	margin-top:7.0em;
+	margin-bottom:7.0em;
+}
+#delete{
+	display:inline;
+}
+.title
+{
+	letter-spacing:5px;
+}
+#like
+{
+	height:35px;
+}
+#footer
+{
+	margin-top:7.0em;
+}
+.foot{
+	padding-right:10px;
+	text-decoration:none;
+}

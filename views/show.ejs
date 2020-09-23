@@ -1,0 +1,53 @@
+<%- include ("partials/header.ejs") %>
+	<div class="ui main text raised segment container">
+		<div class="ui centered huge header"><%= blog.title %></div>
+		<div class ="ui top attached">
+				<div class="item">
+					<img style="padding-bottom:20px;" class="ui centered rounded image" src="<%=blog.image%>">
+					<div class="content">
+						<p>
+							<em>Posted By: <%= blog.author.username %>, <%= moment(blog.createdAt).fromNow()%></em>
+							<span id="like" class="ui right floated labeled button">
+								<button class="ui compact red button">
+                                	<i id="likeButton" class="heart icon"></i> Like
+								</button>
+ 								<a class="ui basic red left pointing label">86</a>
+							</span>
+						</p>
+     				</div>	
+					<div style="padding-top:25px;" class="description">
+						<p><%-blog.body %></p>
+					</div>
+					<div class ="extra">
+						<% if(currentUser && blog.author.id.equals(currentUser._id)){ %>
+							<a href="/blogs/<%= blog._id %>/edit">
+								<button class="compact ui orange button">Edit</button>
+						    </a>
+							<form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+								<button class="compact ui red  button">Delete</button>
+						    </form>
+						<% } %>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>	
+<%- include ("partials/footer.ejs") %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
